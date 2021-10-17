@@ -1,16 +1,18 @@
 <mvc:View controllerName="alight.sapui5.controller.App"
     xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true">
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
     <Shell >
         <App >
             <pages>
                 <Page title = "{i18n>appTitle}">
-                    <content>             
+                    <headerContent>
+                        <Button id = "helloDialogHeader" press=".onOpenDialogHeader" class = "sapUiSmallMarginEnd" icon="sap-icon://action"/>
+                    </headerContent>
+                    <content>
                         <mvc:XMLView viewName="alight.sapui5.view.HelloPanel"/>
                     </content>
                 </Page>
-            </pages>        
+            </pages>
         </App>
     </Shell>
 </mvc:View>

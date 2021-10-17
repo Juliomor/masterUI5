@@ -10,8 +10,12 @@ sap.ui.define([
 
         return Controller.extend("alight.sapui5.controller.App", {
 
-            onInit: function (){
+            onInit: function () {
 
+            },
+
+            onOpenDialogHeader: function () {
+                this.getOwnerComponent().openHelloDialog();
             }
         });
     });
