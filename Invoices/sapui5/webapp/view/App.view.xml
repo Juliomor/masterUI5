@@ -10,6 +10,7 @@
                     </headerContent>
                     <content>
                         <mvc:XMLView viewName="alight.sapui5.view.HelloPanel"/>
+                        <mvc:XMLView viewName="alight.sapui5.view.InvoicesList"/>
                     </content>
                 </Page>
             </pages>
