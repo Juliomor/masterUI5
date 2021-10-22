@@ -10,7 +10,17 @@
         "title": "{{appTitle}}",
         "description": "{{appDescription}}",
         "resources": "resources.json",
-        "ach": "ach"
+        "ach": "ach",
+        "dataSources": {
+            "mainService": {
+                "uri": "/V2/Northwind/Northwind.svc/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata.xml"
+                }
+            }
+        }
     },
     "sap.ui": {
         "technology": "UI5",
@@ -59,6 +69,15 @@
             "invoices": {
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "Invoices.json"
+            },
+            "northwind": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false
+                }
             }
         },
         "resources": {
