@@ -1,11 +1,10 @@
 <mvc:View controllerName="alight.sapui5.controller.HelloPanel"
     xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc" 
-    xmlns:core="sap.ui.core" 
-    displayBlock="true">
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core" displayBlock="true">
     <Panel headerText="{i18n>helloPanel}" class = "sapUiResponsiveMargin" width="auto">
         <content>
-            <Button text = "{i18n>helloDialog}" press=".onOpenDialog" class = "sapUiSmallMarginEnd" icon="sap-icon://action"/>
+            <Button id = "helloDialogButton" text = "{i18n>helloDialog}" press=".onOpenDialog" class = "sapUiSmallMarginEnd" icon="sap-icon://action"/>
             <Button text = "{i18n>sayHello}" press=".onShowHello" class = "sapUiSmallMarginEnd"/>
             <Input value = "{/recipient/name}" width = "60%" valueLiveUpdate="true" />
             <Text text="{i18n>Hello} {/recipient/name}" class = "sapUiSmallMargin boldElements"/>
