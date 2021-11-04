@@ -26,11 +26,10 @@ sap.ui.define([
                 //Data model                           
                 this.setModel(Models.createRecipient());
 
-                //i18n model
-                var i18nModel = new ResourceModel({ bundleName: "alight.sapui5.i18n.i18n" });
-                this.setModel(i18nModel, "i18n");
-
                 this._helloDialog = new HelloDialog(this.getRootControl());
+
+                //Init Routing
+                this.getRouter().initialize();
             },
 
             exit: function () {

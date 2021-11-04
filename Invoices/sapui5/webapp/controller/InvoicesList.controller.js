@@ -41,6 +41,16 @@ sap.ui.define([
 
 
 
+            },
+
+            navigateToDetails: function (oEvent) {
+
+                const oRouter = sap.ui.core.UIComponent.getRouterFor(this),
+                    oItem = oEvent.getSource();
+
+                oRouter.navTo("Details", {
+                    invoicePath: window.encodeURIComponent(oItem.getBindingContext("northwind").getPath().substr(1))
+                });
             }
         });
-    });
+    }); 

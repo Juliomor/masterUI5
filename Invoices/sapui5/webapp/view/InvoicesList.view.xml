@@ -18,9 +18,9 @@
             <ObjectListItem title = "{northwind>Quantity} x {northwind>ProductName}" numberUnit="{currency>/usd}"
                             number = "{ parts : [ {path: 'northwind>ExtendedPrice'}],
                                         type: 'sap.ui.model.type.Currency', 
-                                        formatOptions: {
+                                        formatOptions: {                                            
                                             showMeasure: false
-                                        }}" numberState="{= ${northwind>ExtendedPrice} > 50 ? 'Success' : 'Error'}">
+                                        }}" numberState="{= ${northwind>ExtendedPrice} > 50 ? 'Success' : 'Error'}" type="Navigation" press="navigateToDetails">
             </ObjectListItem>
         </items>
     </List>
