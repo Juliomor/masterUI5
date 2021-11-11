@@ -20,6 +20,7 @@ sap.ui.define([
             },
 
             _onObjectMatched: function (oEvent) {
+                this.byId("rating").reset();
                 this.getView().bindElement({
                     path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").invoicePath),
                     model: "northwind"
@@ -36,8 +37,13 @@ sap.ui.define([
                     const oRouter = UIComponent.getRouterFor(this);
                     oRouter.navTo("RouteApp", {}, true);
                 }
+            },
 
+            onRatingChange: function (oEvent) {
+                const fValue = oEvent.getParameter("value"),
+                    oBundle = this.getView().getModel("i18n").getResourceBundle();
 
+                sap.m.MessageToast.show(oBundle.getText("ratingConfirmation", [fValue]));
             }
 
         });

@@ -1,6 +1,7 @@
 <mvc:View controllerName="alight.sapui5.controller.Details"
     xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:custom = "alight.sapui5.control" displayBlock="true">
     <Page title = "{i18n>detailsTitle}" showNavButton="true" navButtonPress=".onNavBack">
         <ObjectHeader title = "{northwind>Quantity} x {northwind>ProductName}">
             <attributes>
@@ -14,5 +15,6 @@
                 <ObjectAttribute text="{northwind>CustomerName}"/>
             </attributes>
         </ObjectHeader>
+        <custom:ProductRating id = "rating" class = "sapUiSmallMarginBeginEnd" change = ".onRatingChange" />
     </Page>
 </mvc:View>
